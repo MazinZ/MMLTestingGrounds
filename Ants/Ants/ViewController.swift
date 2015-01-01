@@ -15,7 +15,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var midLeftButton: UIButton!
     @IBOutlet weak var botRightButton: UIButton!
     @IBOutlet weak var botMidButton: UIButton!
-    @IBOutlet weak var botLeftbutton: UIButton!
+    @IBOutlet weak var botLeftButton: UIButton!
+    @IBOutlet weak var rightSumLabel: UILabel!
+    @IBOutlet weak var leftSumLabel: UILabel!
+    @IBOutlet weak var botSumLabel: UILabel!
     
     var topButtonNum: Int = 1
     var midRightButtonNum: Int = 1
@@ -27,13 +30,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
-        topButton.setTitle("1", forState: UIControlState.Normal)
-        midRightButton.setTitle("1", forState: UIControlState.Normal)
-        midLeftButton.setTitle("1", forState: UIControlState.Normal)
-        botMidButton.setTitle("1", forState: UIControlState.Normal)
-        botLeftbutton.setTitle("1", forState: UIControlState.Normal)
-        botRightButton.setTitle("1", forState: UIControlState.Normal)
+        initializeDefButtons()
     }
 
     override func didReceiveMemoryWarning() {
@@ -49,6 +46,7 @@ class ViewController: UIViewController {
         } else {
             topButton.setTitle(String(topButtonNum), forState: UIControlState.Normal)
         }
+        calculateSum()
     }
     
     @IBAction func midLeftClick() {
@@ -59,6 +57,7 @@ class ViewController: UIViewController {
         } else {
             midLeftButton.setTitle(String(midLeftButtonNum), forState: UIControlState.Normal)
         }
+        calculateSum()
     }
     
     @IBAction func midRightClick() {
@@ -69,16 +68,18 @@ class ViewController: UIViewController {
         } else {
             midRightButton.setTitle(String(midRightButtonNum), forState: UIControlState.Normal)
         }
+        calculateSum()
     }
     
     @IBAction func botLeftClick() {
         botLeftButtonNum++
         if(botLeftButtonNum == 7){
-            botLeftbutton.setTitle("1", forState: UIControlState.Normal)
+            botLeftButton.setTitle("1", forState: UIControlState.Normal)
             botLeftButtonNum = 1
         } else {
-            botLeftbutton.setTitle(String(botLeftButtonNum), forState: UIControlState.Normal)
+            botLeftButton.setTitle(String(botLeftButtonNum), forState: UIControlState.Normal)
         }
+        calculateSum()
     }
     
     @IBAction func botMidClick() {
@@ -89,6 +90,7 @@ class ViewController: UIViewController {
         } else {
             botMidButton.setTitle(String(botMidButtonNum), forState: UIControlState.Normal)
         }
+        calculateSum()
     }
     
     @IBAction func botRightClick() {
@@ -99,6 +101,54 @@ class ViewController: UIViewController {
         } else {
             botRightButton.setTitle(String(botRightButtonNum), forState: UIControlState.Normal)
         }
+        calculateSum()
+    }
+    
+    func initializeDefButtons () -> Void {
+        topButton.setTitle("1", forState: UIControlState.Normal)
+        midRightButton.setTitle("1", forState: UIControlState.Normal)
+        midLeftButton.setTitle("1", forState: UIControlState.Normal)
+        botMidButton.setTitle("1", forState: UIControlState.Normal)
+        botLeftButton.setTitle("1", forState: UIControlState.Normal)
+        botRightButton.setTitle("1", forState: UIControlState.Normal)
+        calculateSum()
+    }
+    
+    func calculateSum () -> Void{
+        var winner = true
+        var leftSumN: Int?
+        var rightSumN: Int?
+        var botSumN: Int?
+        
+        rightSumN = topButtonNum + midRightButtonNum + botRightButtonNum
+        botSumN = botRightButtonNum + botMidButtonNum + botLeftButtonNum
+        leftSumN = topButtonNum + midLeftButtonNum + botLeftButtonNum
+        
+        rightSumLabel.text = "\(rightSumN!)"
+        botSumLabel.text = "\(botSumN!)"
+        leftSumLabel.text = "\(leftSumN!)"
+        
+        if(rightSumN == 10 && botSumN == 10 && leftSumN == 10){
+            var numberArray: [Int] = [ topButtonNum, midLeftButtonNum, midRightButtonNum, botLeftButtonNum, botMidButtonNum, botRightButtonNum]
+            
+            for var i = 0 ; i<numberArray.count ; i++ {
+                for var j = 0 ; j<numberArray.count ; j++ {
+                    if(numberArray[i] == numberArray[j]){
+                        if(i != j){
+                            winner = false
+                        }
+                    }
+                }
+            }
+            if(winner){
+                println("Winner")
+            }
+        }
+        
+        
+        
+        
+        
     }
     
 }
