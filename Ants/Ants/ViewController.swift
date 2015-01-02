@@ -19,6 +19,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var rightSumLabel: UILabel!
     @IBOutlet weak var leftSumLabel: UILabel!
     @IBOutlet weak var botSumLabel: UILabel!
+    @IBOutlet weak var contButton: UIButton!
     
     var topButtonNum: Int = 1
     var midRightButtonNum: Int = 1
@@ -112,6 +113,7 @@ class ViewController: UIViewController {
         botLeftButton.setTitle("1", forState: UIControlState.Normal)
         botRightButton.setTitle("1", forState: UIControlState.Normal)
         calculateSum()
+        contButton.hidden = true
     }
     
     func calculateSum () -> Void{
@@ -141,6 +143,7 @@ class ViewController: UIViewController {
                 }
             }
             if(winner){
+                contButton.hidden = false
                 println("Winner")
             }
         }
@@ -148,3 +151,30 @@ class ViewController: UIViewController {
     
 }
 
+class SquareViewController: UIViewController {
+    
+    @IBOutlet weak var topLeftBut: UIButton!
+    
+    @IBOutlet weak var topBut: UIButton!
+    
+    @IBOutlet weak var topRightBut: UIButton!
+    
+    
+    
+    @IBOutlet weak var botLeftBut: UIButton!
+    
+    
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    
+}
