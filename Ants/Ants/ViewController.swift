@@ -425,3 +425,7 @@ class PentagonViewController: UIViewController {
         calculatePentSum()
     }
 }
+
+class HexagonViewController: UIViewController {
+
+}
