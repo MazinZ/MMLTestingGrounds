@@ -405,6 +405,7 @@
 				C9B950C11A55F5A50064079A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C9B950C21A55F5A50064079A /* Build configuration list for PBXNativeTarget "AntsTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +414,7 @@
 				C9B950C41A55F5A50064079A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

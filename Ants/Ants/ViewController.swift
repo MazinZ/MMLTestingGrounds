@@ -144,11 +144,6 @@ class ViewController: UIViewController {
                 println("Winner")
             }
         }
-        
-        
-        
-        
-        
     }
     
 }
