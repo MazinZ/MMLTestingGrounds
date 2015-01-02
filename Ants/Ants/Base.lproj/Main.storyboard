@@ -73,8 +73,8 @@
                                     <action selector="botRightClick" destination="vXZ-lx-hvc" eventType="touchUpInside" id="CNV-YX-Z1l"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gxp-a7-1i4">
-                                <rect key="frame" x="115" y="55" width="92" height="40"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gxp-a7-1i4">
+                                <rect key="frame" x="115" y="55" width="91" height="40"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <state key="normal" title="Continue">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -183,6 +183,7 @@
                                 </state>
                                 <connections>
                                     <action selector="midLeftClick" destination="vXZ-lx-hvc" eventType="touchUpInside" id="92B-CM-Z2s"/>
+                                    <action selector="midLeftClick" destination="vNV-76-9f8" eventType="touchUpInside" id="aGf-Sg-avU"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OXq-nV-yIE">
@@ -191,6 +192,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="topClick" destination="vNV-76-9f8" eventType="touchUpInside" id="1A2-uk-BWH"/>
                                     <action selector="topClick" destination="vXZ-lx-hvc" eventType="touchUpInside" id="yFK-vP-FL6"/>
                                 </connections>
                             </button>
@@ -200,6 +202,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="botMidClick" destination="vNV-76-9f8" eventType="touchUpInside" id="kXl-Ts-hjh"/>
                                     <action selector="botMidClick" destination="vXZ-lx-hvc" eventType="touchUpInside" id="x7m-ju-ZeG"/>
                                 </connections>
                             </button>
@@ -209,25 +212,17 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="botRightClick" destination="vNV-76-9f8" eventType="touchUpInside" id="U47-Gv-uz7"/>
                                     <action selector="botRightClick" destination="vXZ-lx-hvc" eventType="touchUpInside" id="eDm-Jt-DJv"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Umb-qX-e8z">
-                                <rect key="frame" x="69" y="384" width="49" height="30"/>
-                                <state key="normal" title="botLeft">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="botLeftClick" destination="vXZ-lx-hvc" eventType="touchUpInside" id="dMl-UC-uZE"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4zw-l1-yPj">
-                                <rect key="frame" x="67" y="196" width="52" height="30"/>
+                                <rect key="frame" x="66" y="196" width="52" height="30"/>
                                 <state key="normal" title="topLeft">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="midLeftClick" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Myu-qi-dIF"/>
+                                    <action selector="topLeftClick" destination="vNV-76-9f8" eventType="touchUpInside" id="Bb4-Ts-UH6"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kjD-cD-5n4">
@@ -237,6 +232,7 @@
                                 </state>
                                 <connections>
                                     <action selector="topClick" destination="vXZ-lx-hvc" eventType="touchUpInside" id="K5J-wh-QfT"/>
+                                    <action selector="topRightClick" destination="vNV-76-9f8" eventType="touchUpInside" id="cK6-U2-RuO"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cY3-gz-rD2">
@@ -245,7 +241,17 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="midRightClick" destination="vXZ-lx-hvc" eventType="touchUpInside" id="bAP-qf-pDa"/>
+                                    <action selector="midRightClick" destination="vNV-76-9f8" eventType="touchUpInside" id="nHf-Pg-ydR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Umb-qX-e8z">
+                                <rect key="frame" x="69" y="384" width="49" height="30"/>
+                                <state key="normal" title="botLeft">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="botLeftClick" destination="vXZ-lx-hvc" eventType="touchUpInside" id="dMl-UC-uZE"/>
+                                    <action selector="botLeftClick" destination="vNV-76-9f8" eventType="touchUpInside" id="oxs-4j-CSY"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -254,9 +260,17 @@
                     <navigationItem key="navigationItem" id="aB6-VL-5Bd"/>
                     <connections>
                         <outlet property="botLeftBut" destination="Umb-qX-e8z" id="sJ4-2m-iJ7"/>
+                        <outlet property="botMidBut" destination="2Wg-zs-D7D" id="R27-w2-GwD"/>
+                        <outlet property="botRightBut" destination="xAD-et-LDo" id="zaK-Ua-Xrv"/>
+                        <outlet property="botSumLab" destination="xBo-2V-WBF" id="V5W-e7-qNW"/>
+                        <outlet property="leftSumLab" destination="hwm-bk-6bX" id="gvD-Z4-jVt"/>
+                        <outlet property="midLeftBut" destination="VpC-gU-Uen" id="rlX-V8-QgA"/>
+                        <outlet property="midRightBut" destination="cY3-gz-rD2" id="Gr7-As-dMw"/>
+                        <outlet property="rightSumLab" destination="clg-ap-b3g" id="AhO-jI-2Mz"/>
                         <outlet property="topBut" destination="OXq-nV-yIE" id="pWy-x3-SPa"/>
                         <outlet property="topLeftBut" destination="4zw-l1-yPj" id="gbM-6T-EJm"/>
                         <outlet property="topRightBut" destination="kjD-cD-5n4" id="tEY-MA-D6b"/>
+                        <outlet property="topSumLab" destination="OWE-Ic-PcZ" id="51Z-oP-u2G"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5wn-o4-KZq" userLabel="First Responder" sceneMemberID="firstResponder"/>

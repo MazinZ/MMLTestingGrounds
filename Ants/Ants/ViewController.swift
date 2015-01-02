@@ -8,6 +8,20 @@
 
 import UIKit
 
+func buttonClicker(inout myButton: UIButton!, inout myButtonNum: Int, maxNum: Int) -> Void {
+    
+    myButtonNum++
+    
+    if(myButtonNum == maxNum){
+        myButton.setTitle("1", forState: UIControlState.Normal)
+        myButtonNum = 1
+    } else {
+        myButton.setTitle(String(myButtonNum), forState: UIControlState.Normal)
+    }
+}
+
+
+
 class ViewController: UIViewController {
 
     @IBOutlet weak var topButton: UIButton!
@@ -154,17 +168,27 @@ class ViewController: UIViewController {
 class SquareViewController: UIViewController {
     
     @IBOutlet weak var topLeftBut: UIButton!
-    
     @IBOutlet weak var topBut: UIButton!
-    
     @IBOutlet weak var topRightBut: UIButton!
-    
-    
-    
+    @IBOutlet weak var midLeftBut: UIButton!
+    @IBOutlet weak var midRightBut: UIButton!
     @IBOutlet weak var botLeftBut: UIButton!
+    @IBOutlet weak var botMidBut: UIButton!
+    @IBOutlet weak var botRightBut: UIButton!
     
+    var topLeftButtonNum: Int = 1
+    var topButtonNum: Int = 1
+    var topRightButtonNum: Int = 1
+    var midRightButtonNum: Int = 1
+    var midLeftButtonNum: Int = 1
+    var botRightButtonNum: Int = 1
+    var botMidButtonNum: Int = 1
+    var botLeftButtonNum: Int = 1
     
-    
+    @IBOutlet weak var topSumLab: UILabel!
+    @IBOutlet weak var leftSumLab: UILabel!
+    @IBOutlet weak var rightSumLab: UILabel!
+    @IBOutlet weak var botSumLab: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -176,5 +200,28 @@ class SquareViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    
+    @IBAction func topLeftClick() {
+        buttonClicker(&topLeftBut, &topLeftButtonNum, 9)
+    }
+    @IBAction func topClick() {
+        buttonClicker(&topBut, &topButtonNum, 9)
+    }
+    @IBAction func topRightClick() {
+        buttonClicker(&topRightBut, &topRightButtonNum, 9)
+    }
+    @IBAction func midLeftClick() {
+        buttonClicker(&midLeftBut, &midLeftButtonNum, 9)
+    }
+    @IBAction func midRightClick() {
+        buttonClicker(&midRightBut, &midRightButtonNum, 9)
+    }
+    @IBAction func botLeftClick() {
+        buttonClicker(&botLeftBut, &botLeftButtonNum, 9)
+    }
+    @IBAction func botMidClick() {
+        buttonClicker(&botMidBut, &botMidButtonNum, 9)
+    }
+    @IBAction func botRightClick() {
+        buttonClicker(&botRightBut, &botRightButtonNum, 9)
+    }
 }

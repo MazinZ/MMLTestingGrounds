@@ -36,6 +36,7 @@
 		C9B950B51A55F5A50064079A /* AntsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AntsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9B950BA1A55F5A50064079A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C9B950BB1A55F5A50064079A /* AntsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AntsTests.swift; sourceTree = "<group>"; };
+		C9B951061A5632520064079A /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +60,7 @@
 		C9B950971A55F5A50064079A = {
 			isa = PBXGroup;
 			children = (
+				C9B951061A5632520064079A /* MyPlayground.playground */,
 				C9B950A21A55F5A50064079A /* Ants */,
 				C9B950B81A55F5A50064079A /* AntsTests */,
 				C9B950A11A55F5A50064079A /* Products */,
