@@ -73,16 +73,6 @@
                                     <action selector="botRightClick" destination="vXZ-lx-hvc" eventType="touchUpInside" id="CNV-YX-Z1l"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gxp-a7-1i4">
-                                <rect key="frame" x="115" y="55" width="91" height="40"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                <state key="normal" title="Continue">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="vNV-76-9f8" kind="custom" id="bd7-YN-82t"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="botSum" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fAS-4L-WSh">
                                 <rect key="frame" x="131" y="451" width="61" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -96,6 +86,16 @@
                                 </state>
                                 <connections>
                                     <action selector="botLeftClick" destination="vXZ-lx-hvc" eventType="touchUpInside" id="hB8-Lc-tGs"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gxp-a7-1i4">
+                                <rect key="frame" x="115" y="55" width="91" height="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <state key="normal" title="Continue">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="vNV-76-9f8" kind="custom" id="bd7-YN-82t"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -138,7 +138,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="128" y="180"/>
+            <point key="canvasLocation" x="132" y="204"/>
         </scene>
         <!--Square View Controller-->
         <scene sceneID="HHV-kS-xty">
@@ -254,6 +254,16 @@
                                     <action selector="botLeftClick" destination="vNV-76-9f8" eventType="touchUpInside" id="oxs-4j-CSY"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YW5-uH-YcO">
+                                <rect key="frame" x="115" y="58" width="91" height="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <state key="normal" title="Continue">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="DTH-sC-XKr" kind="custom" id="fUP-HT-vLR"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.29547427399999998" green="0.29547427399999998" blue="0.29547427399999998" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -263,6 +273,7 @@
                         <outlet property="botMidBut" destination="2Wg-zs-D7D" id="R27-w2-GwD"/>
                         <outlet property="botRightBut" destination="xAD-et-LDo" id="zaK-Ua-Xrv"/>
                         <outlet property="botSumLab" destination="xBo-2V-WBF" id="V5W-e7-qNW"/>
+                        <outlet property="contButton" destination="YW5-uH-YcO" id="0B5-dr-fW6"/>
                         <outlet property="leftSumLab" destination="hwm-bk-6bX" id="gvD-Z4-jVt"/>
                         <outlet property="midLeftBut" destination="VpC-gU-Uen" id="rlX-V8-QgA"/>
                         <outlet property="midRightBut" destination="cY3-gz-rD2" id="Gr7-As-dMw"/>
@@ -275,7 +286,174 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5wn-o4-KZq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="566" y="180"/>
+            <point key="canvasLocation" x="354" y="253"/>
+        </scene>
+        <!--Pentagon View Controller-->
+        <scene sceneID="AGn-fA-CKR">
+            <objects>
+                <viewController id="DTH-sC-XKr" customClass="PentagonViewController" customModule="Ants" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sLg-dl-de6"/>
+                        <viewControllerLayoutGuide type="bottom" id="33p-kh-yqx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="JZR-xg-XmW">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="botSum" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ozM-Zw-6CG">
+                                <rect key="frame" x="127" y="409" width="61" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.094635112869999996" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="topLeftSum" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DIg-TI-m5R">
+                                <rect key="frame" x="4" y="93" width="90" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.094635112869999996" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="topRightSum" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dLr-c4-rFW">
+                                <rect key="frame" x="219" y="93" width="101" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.094635112869999996" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="botRightSum" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="drg-QU-L7t">
+                                <rect key="frame" x="235" y="368" width="101" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.094635112869999996" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A9U-1n-Ris">
+                                <rect key="frame" x="0.0" y="191" width="52" height="30"/>
+                                <state key="normal" title="I">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="iClick" destination="DTH-sC-XKr" eventType="touchUpInside" id="LUo-Rq-TyR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WaS-yI-jep">
+                                <rect key="frame" x="195" y="330" width="59" height="30"/>
+                                <state key="normal" title="E">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="eClick" destination="DTH-sC-XKr" eventType="touchUpInside" id="4tl-EL-Cvp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jkw-mf-HqG">
+                                <rect key="frame" x="54" y="127" width="52" height="30"/>
+                                <state key="normal" title="J">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="jClick" destination="DTH-sC-XKr" eventType="touchUpInside" id="TPB-Rf-hyp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dju-D3-LLq">
+                                <rect key="frame" x="213" y="127" width="59" height="30"/>
+                                <state key="normal" title="B">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="bClick" destination="DTH-sC-XKr" eventType="touchUpInside" id="3zW-nh-kdV"/>
+                                    <action selector="topClick" destination="vXZ-lx-hvc" eventType="touchUpInside" id="22j-Uy-khn"/>
+                                    <action selector="topRightClick" destination="vNV-76-9f8" eventType="touchUpInside" id="tud-dZ-YcI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fgr-H8-QKT">
+                                <rect key="frame" x="258" y="191" width="62" height="30"/>
+                                <state key="normal" title="C">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="cClick" destination="DTH-sC-XKr" eventType="touchUpInside" id="wum-mD-TDz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QbK-Qc-msI">
+                                <rect key="frame" x="66" y="330" width="49" height="30"/>
+                                <state key="normal" title="G">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="gClick" destination="DTH-sC-XKr" eventType="touchUpInside" id="v38-b3-JKp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WhE-4P-Fnv">
+                                <rect key="frame" x="112" y="11" width="91" height="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <state key="normal" title="Continue">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ecm-QI-niM">
+                                <rect key="frame" x="227" y="269" width="62" height="30"/>
+                                <state key="normal" title="D">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="dClick" destination="DTH-sC-XKr" eventType="touchUpInside" id="mOE-Su-2ha"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jZC-oF-ruv">
+                                <rect key="frame" x="23" y="269" width="52" height="30"/>
+                                <state key="normal" title="H">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="hClick" destination="DTH-sC-XKr" eventType="touchUpInside" id="A0X-0D-4J8"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="botLeftSum" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="crT-Uy-b20">
+                                <rect key="frame" x="2" y="368" width="90" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.094635112869999996" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jpE-wb-xKk">
+                                <rect key="frame" x="142" y="89" width="30" height="30"/>
+                                <state key="normal" title="A">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="aClick" destination="DTH-sC-XKr" eventType="touchUpInside" id="hyu-VP-o8j"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sau-cG-GwO">
+                                <rect key="frame" x="133" y="330" width="49" height="30"/>
+                                <state key="normal" title="F">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="fClick" destination="DTH-sC-XKr" eventType="touchUpInside" id="7z5-eJ-XYo"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.29547427399999998" green="0.29547427399999998" blue="0.29547427399999998" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <connections>
+                        <outlet property="aBut" destination="jpE-wb-xKk" id="2Uc-JH-lje"/>
+                        <outlet property="bBut" destination="dju-D3-LLq" id="cNj-HT-Saw"/>
+                        <outlet property="botLeftSumBut" destination="crT-Uy-b20" id="pdI-k5-RlN"/>
+                        <outlet property="botRightSumBut" destination="drg-QU-L7t" id="u40-da-NcQ"/>
+                        <outlet property="botSumBut" destination="ozM-Zw-6CG" id="a6z-w8-g3W"/>
+                        <outlet property="cBut" destination="Fgr-H8-QKT" id="zhi-jD-93o"/>
+                        <outlet property="contbutton" destination="WhE-4P-Fnv" id="i84-hf-cfp"/>
+                        <outlet property="dBut" destination="Ecm-QI-niM" id="uHi-tL-jO8"/>
+                        <outlet property="eBut" destination="WaS-yI-jep" id="fQG-1e-SCK"/>
+                        <outlet property="fBut" destination="sau-cG-GwO" id="bIA-o5-2PI"/>
+                        <outlet property="gBot" destination="QbK-Qc-msI" id="uQO-WC-GCN"/>
+                        <outlet property="hBot" destination="jZC-oF-ruv" id="Vr7-id-iI7"/>
+                        <outlet property="iBot" destination="A9U-1n-Ris" id="3nH-ho-pAJ"/>
+                        <outlet property="jbot" destination="Jkw-mf-HqG" id="A5E-MX-F05"/>
+                        <outlet property="topLeftSumBut" destination="DIg-TI-m5R" id="on6-Ax-XFz"/>
+                        <outlet property="topRightSumBut" destination="dLr-c4-rFW" id="qGG-zA-q8h"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="90b-05-he5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="565" y="309"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
